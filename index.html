@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>{{ title }}</title>
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/vue/latest/vue.js"></script>
+
+<div id="app">
+  <input v-model="title">
+</div>
+
+<script>
+new Vue({
+    el: 'html',
+    data: {
+        title: 'My Title'
+    }
+})
+</script>
+
+</body>
+</html>
