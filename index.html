@@ -1,22 +1,33 @@
-<html>
-<head>
-<title>{{ title }}</title>
-</head>
-<body>
-<script src="https://cdn.jsdelivr.net/vue/latest/vue.js"></script>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<div id="app">
-  <input v-model="title">
-</div>
+    <!-- Bootstrap CSS -->
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" >
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+    <!-- fontawesome -->
+    <link href="./fontawesome/css/all.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5982fa9774.js" crossorigin="anonymous"></script>
+    <!-- Rasa logi style -->
+    <link href="./rasa-style/rasa.css" rel="stylesheet" >
 
-<script>
-new Vue({
-    el: 'html',
-    data: {
-        title: 'My Title'
-    }
-})
-</script>
+    <title>CV - Ansori Riza Yogi Saputro</title>
+  </head>
+  <body>
+    
+    <div id="to-top" style="opacity: 1;">
+        <i class="fas fa-chevron-up" aria-hidden="true"></i>
+    </div>
 
-</body>
+    <!-- Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="./bootstrap/js/bootstrap.bundle.min.js" ></script>
+    <script src="./rasa-style/rasa.js" ></script>
+  </body>
 </html>
