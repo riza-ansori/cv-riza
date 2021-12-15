@@ -10,17 +10,50 @@
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,600&display=swap" rel="stylesheet">
     <!-- fontawesome -->
     <link href="./fontawesome/css/all.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/5982fa9774.js" crossorigin="anonymous"></script>
     <!-- Rasa logi style -->
-    <link href="./rasa-style/rasa.css" rel="stylesheet" >
+    <link href="./style/style.css" rel="stylesheet" >
 
     <title>CV - Ansori Riza Yogi Saputro</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
   </head>
   <body>
-    
+    <div id="cv-riza">
+        <section id="banner">
+            <div class="d-flex flex-wrap align-items-center">
+                <div class="col-md-6 col-12 px-10-persen pe-md-4">
+                    <h1 id="intro-banner" class="text-light mb-5">{{ msg }}<br/>{{ msg2 }}</h1>
+                </div>
+                <div class="col-md-6 col-12">
+                    <!-- <img src="./img/project-banner.png" alt="project banner" class="w-100 fillter-grey"> -->
+                    <img v-bind:src="urlBanner" v-bind:class="cls" />
+                </div>
+            </div>
+        </section>
+        <section id="about-me" class="content-section pb-0">
+            <div class="container">
+                <div class="row align-items-start">
+                    <div class="col-md-6 col-12">
+                        <!-- <img src="./img/ansori-riza.png" class="w-100"> -->
+                        <img v-bind:src="urlPortrait" class="mx-auto d-block"/>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <span class="title-section mb-3 d-block">{{titleAbout}}</span>
+                        <h2 class="subtitle-section mb-4">{{subtitleAbout}}</h2>
+                        <p>{{pAbout1}}</p>
+                        <p>My hobbies are playing games and reading books.</p>
+                        <p>I graduated from STMIK Jendral Ahmad Yani Yogyakarta, with Computer Science bachelor's degree.</p>
+                        <p>Since 2015 I have been building a website. For building a website I use HTML5, CSS, JavaScript, PHP.  Besides that, I experienced using Laravel, React, and WordPress.</p>
+                        <p>I use Adobe XD, Figma, Affinity, and Photoshop to design websites.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
     <div id="to-top" style="opacity: 1;">
         <i class="fas fa-chevron-up" aria-hidden="true"></i>
     </div>
@@ -28,6 +61,6 @@
     <!-- Bootstrap JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <script src="./bootstrap/js/bootstrap.bundle.min.js" ></script>
-    <script src="./rasa-style/rasa.js" ></script>
+    <script src="./style/style.js" ></script>
   </body>
 </html>
