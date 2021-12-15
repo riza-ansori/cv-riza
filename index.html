@@ -126,6 +126,16 @@
                 </div>
             </div>
         </section>
+        <footer id="footer">
+            <div class="container">
+                <ul class="list-sosmed">
+                    <li><a v-bind:href="'mailto:' + person.email" target="_blank" class="icon-sosmed"><i class="fas fa-envelope"></i></a></li>
+                    <li><a v-bind:href="person.linkedin" target="_blank" class="icon-sosmed"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a v-bind:href="person.github" target="_blank" class="icon-sosmed"><i class="fab fa-github-alt"></i></a></li>
+                    <li><a v-bind:href="person.pinterest" target="_blank" class="icon-sosmed"><i class="fab fa-pinterest-p"></i></a></li>
+                </ul>
+            </div>
+        </footer>
     </div>
     <div id="to-top" style="opacity: 1;">
         <i class="fas fa-chevron-up" aria-hidden="true"></i>

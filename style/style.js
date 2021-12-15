@@ -73,7 +73,14 @@ var app = new Vue ({
         coffeTitle : "Template Website Coffe Shop",
         coffeContent : "Making this template using html5, css, js and bootstrap. By using Bootstrap as a library framework, this website template can be applied to various website creation frameworks such as Laravel, CI, Yii etc. Even it can be used to create WordPress themes",
         gorillaTitle : "Gorillacoach",
-        gorillaContent : "E-commerce website with multi-payment system and calculator delivery. The addition of Quick view and Wishlist aims to improve user convenience."
+        gorillaContent : "E-commerce website with multi-payment system and calculator delivery. The addition of Quick view and Wishlist aims to improve user convenience.",
+
+        person : {
+            email : "ansori.saputro@gmail.com",
+            linkedin : "https://id.linkedin.com/in/ansori-riza-yogi-saputro-655004137",
+            github : "https://github.com/riza-ansori",
+            pinterest : "https://id.pinterest.com/ansorisaputro"
+        }
     }
 })
 
