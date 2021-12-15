@@ -34,7 +34,7 @@
                 </div>
             </div>
         </section>
-        <section id="about-me" class="content-section pb-0">
+        <section id="about-me" class="content-section pb-0 bg-grey">
             <div class="container">
                 <div class="row align-items-start">
                     <div class="col-md-6 col-12">
@@ -45,10 +45,44 @@
                         <span class="title-section mb-3 d-block">{{titleAbout}}</span>
                         <h2 class="subtitle-section mb-4">{{subtitleAbout}}</h2>
                         <p>{{pAbout1}}</p>
-                        <p>My hobbies are playing games and reading books.</p>
-                        <p>I graduated from STMIK Jendral Ahmad Yani Yogyakarta, with Computer Science bachelor's degree.</p>
-                        <p>Since 2015 I have been building a website. For building a website I use HTML5, CSS, JavaScript, PHP.  Besides that, I experienced using Laravel, React, and WordPress.</p>
-                        <p>I use Adobe XD, Figma, Affinity, and Photoshop to design websites.</p>
+                        <p>{{pAbout2}}</p>
+                        <p>{{pAbout3}}</p>
+                        <p>{{pAbout4}}</p>
+                        <p>{{pAbout5}}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="experience" class="content-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7 col-12">
+                        <h2 class="title-section mb-3 d-block">{{titleExperience}}</h2>
+                        <ul>
+                            <li v-for="todo in todos">
+                              {{ todo.text }}
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-5 col-12">
+                        <div class="progress-experience mb-3">
+                            <h3 class="title-experience">{{uiux}}</h3>
+                            <div class="progress">
+                                <div id="progress-uiux" class="progress-bar bg-dark-grey progress-striped active" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="progress-experience mb-3">
+                            <h3 class="title-experience">{{frontend}}</h3>
+                            <div class="progress">
+                                <div id="progress-frontend" class="progress-bar bg-dark-grey progress-striped active" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="progress-experience">
+                            <h3 class="title-experience">{{seo}}</h3>
+                            <div class="progress">
+                                <div id="progress-seo" class="progress-bar bg-dark-grey progress-striped active" style="width: 0%"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
