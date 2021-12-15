@@ -14,6 +14,9 @@ h2 {
 ul {
     padding-left: 18px;
 }
+img {
+    max-width: 100%;
+}
 .content-section {
     padding: 85px 0;
 }
@@ -55,6 +58,9 @@ p:last-child {
 }
 .progress-bar {
     border-radius: 0;
+}
+.portfolio-list {
+    margin-bottom: 50px;
 }
 
 div#to-top {
