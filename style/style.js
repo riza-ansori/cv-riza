@@ -83,9 +83,11 @@ var app = new Vue ({
 
         person : {
             email : "ansori.saputro@gmail.com",
+            instagram : "https://www.instagram.com/porto_ansoririza/",
             linkedin : "https://id.linkedin.com/in/ansori-riza-yogi-saputro-655004137",
             github : "https://github.com/riza-ansori",
-            pinterest : "https://id.pinterest.com/ansorisaputro"
+            pinterest : "https://id.pinterest.com/ansorisaputro",
+            dribble : "https://dribbble.com/ansoririza"
         }
     }
 })

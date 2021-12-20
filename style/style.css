@@ -53,6 +53,9 @@ p:last-child {
     font-size: 16px;
     font-weight: normal;
 }
+#experience li {
+    line-height: 2;
+}
 .progress {
     height: 30px;   
 }
@@ -62,7 +65,13 @@ p:last-child {
 .portfolio-list {
     margin-bottom: 50px;
 }
-
+.portfolio-list img {
+    filter: grayscale(1);
+    transition: .3s ease;
+}
+.portfolio-list:hover img {
+    filter: grayscale(0);
+}
 .btn-portfolio {
     font-size: 14px;
     font-weight: 600;
@@ -109,6 +118,7 @@ p:last-child {
     border-radius: 100%;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
 }
 
 div#to-top {

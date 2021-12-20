@@ -132,10 +132,12 @@
         <footer id="footer">
             <div class="container">
                 <ul class="list-sosmed">
-                    <li><a v-bind:href="'mailto:' + person.email" target="_blank" class="icon-sosmed"><i class="fas fa-envelope"></i></a></li>
+                    <li><a v-bind:href="'mailto:' + person.email" target="_blank" class="icon-sosmed"><i class="fas fa-envelope"></i></a></li>                    
+                    <li><a v-bind:href="person.instagram" target="_blank" class="icon-sosmed"><i class="fab fa-instagram"></i></a></li>
                     <li><a v-bind:href="person.linkedin" target="_blank" class="icon-sosmed"><i class="fab fa-linkedin-in"></i></a></li>
                     <li><a v-bind:href="person.github" target="_blank" class="icon-sosmed"><i class="fab fa-github-alt"></i></a></li>
                     <li><a v-bind:href="person.pinterest" target="_blank" class="icon-sosmed"><i class="fab fa-pinterest-p"></i></a></li>
+                    <li><a v-bind:href="person.dribble" target="_blank" class="icon-sosmed"><i class="fab fa-dribbble"></i></a></li>
                 </ul>
             </div>
         </footer>
