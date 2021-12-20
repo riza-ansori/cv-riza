@@ -65,15 +65,21 @@ var app = new Vue ({
 
         // Portfolio
         titlePortfolio : "SOME OF MY WORK",
+        
         urlUnivera: "./img/mockup-univera.png",
-        urlCoffe: "./img/mockup-coffe.png",
-        urlGorilla: "./img/mockup-gorillacoach.png",
         univeraTitle : "Project Uni Vera",
         univeraContent : "This is personal project. I create a design template for restaurant websites. Combine whitespace and grid system to make the design look clean and modern.",
+        unveraBtn : "https://id.pinterest.com/pin/916201117914566556/",
+
+        urlCoffe: "./img/mockup-coffe.png",
         coffeTitle : "Template Website Coffe Shop",
         coffeContent : "Making this template using html5, css, js and bootstrap. By using Bootstrap as a library framework, this website template can be applied to various website creation frameworks such as Laravel, CI, Yii etc. Even it can be used to create WordPress themes",
+        coffeBtn : "https://github.com/riza-ansori/coffe-house",
+
+        urlGorilla: "./img/mockup-gorillacoach.png",
         gorillaTitle : "Gorillacoach",
         gorillaContent : "E-commerce website with multi-payment system and calculator delivery. The addition of Quick view and Wishlist aims to improve user convenience.",
+        gorillaBtn : "https://gorillacoachid.com/",
 
         person : {
             email : "ansori.saputro@gmail.com",
