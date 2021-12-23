@@ -28,7 +28,11 @@
         <section id="banner">
             <div class="d-flex flex-wrap align-items-center">
                 <div class="col-md-6 col-12 px-10-persen pe-md-4">
-                    <h1 id="intro-banner" class="text-light mb-5">{{ msg }}<br/>{{ msg2 }}</h1>
+                    <h1 id="intro-banner" class="text-light mb-5">
+                        <span :data-typer="msg"></span>
+                        <!-- <br/>
+                        <span :data-typer="msg2"></span> -->
+                    </h1>
                 </div>
                 <div class="col-md-6 col-12">
                     <img v-bind:src="urlBanner" v-bind:class="cls" />
@@ -39,7 +43,7 @@
             <div class="container">
                 <div class="row align-items-end">
                     <div class="col-md-6 col-12 order-md-0 order-1">
-                        <img v-bind:src="urlPortrait" class="mx-auto d-block" style="max-width: 400px; width: 100%"/>
+                        <img v-bind:src="urlPortrait" class="mx-auto d-block from-nonvisible" style="max-width: 400px; width: 100%"/>
                     </div>
                     <div class="col-md-6 col-12 order-md-1 order-0 pb-md-5 mb-md-5 mb-4">
                         <span class="title-section mb-3 d-block">{{titleAbout}}</span>
@@ -66,15 +70,15 @@
                     </div>
                     <div class="col-md-5 col-12">
                         <div class="progress-experience mb-3">
-                            <h3 class="title-experience">{{uiux}}</h3>
-                            <div class="progress">
-                                <div id="progress-uiux" class="progress-bar bg-dark-grey progress-striped active" style="width: 0%"></div>
-                            </div>
-                        </div>
-                        <div class="progress-experience mb-3">
                             <h3 class="title-experience">{{frontend}}</h3>
                             <div class="progress">
                                 <div id="progress-frontend" class="progress-bar bg-dark-grey progress-striped active" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="progress-experience mb-3">
+                            <h3 class="title-experience">{{design}}</h3>
+                            <div class="progress">
+                                <div id="progress-design" class="progress-bar bg-dark-grey progress-striped active" style="width: 0%"></div>
                             </div>
                         </div>
                         <div class="progress-experience">
@@ -93,7 +97,7 @@
                 <div class="portfolio-list">
                     <div class="row align-items-center">
                         <div class="col-md-6 col-12 order-md-0 order-1">
-                            <img v-bind:src="urlUnivera" class="w-100"/>
+                            <img v-bind:src="urlUnivera" class="w-100 animate-left"/>
                         </div>
                         <div class="col-md-6 col-12 order-md-1 order-0 mb-md-0 mb-4">
                             <span class="title-experience d-block mb-3">{{uiux}}</span>
@@ -112,14 +116,14 @@
                             <a :href="coffeBtn" class="btn btn-portfolio">View Project</a>
                         </div>
                         <div class="col-md-6 col-12">
-                            <img v-bind:src="urlCoffe" class="w-100"/>
+                            <img v-bind:src="urlCoffe" class="w-100 animate-right"/>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-list">
                     <div class="row align-items-center">
                         <div class="col-md-6 col-12 order-md-0 order-1">
-                            <img v-bind:src="urlGorilla" class="w-100"/>
+                            <img v-bind:src="urlGorilla" class="w-100 animate-left"/>
                         </div>
                         <div class="col-md-6 col-12 order-md-1 order-0 mb-md-0 mb-4">
                             <span class="title-experience d-block mb-3">{{ecommerce}}</span>
@@ -140,6 +144,7 @@
                     <li><a v-bind:href="person.github" target="_blank" class="icon-sosmed"><i class="fab fa-github-alt"></i></a></li>
                     <li><a v-bind:href="person.pinterest" target="_blank" class="icon-sosmed"><i class="fab fa-pinterest-p"></i></a></li>
                     <li><a v-bind:href="person.dribble" target="_blank" class="icon-sosmed"><i class="fab fa-dribbble"></i></a></li>
+                    <li><a v-bind:href="person.behance" target="_blank" class="icon-sosmed"><i class="fab fa-behance"></i></a></li>
                 </ul>
             </div>
         </footer>

@@ -17,32 +17,91 @@ $(document).ready(function(){
         $(window).scrollTop(0);
     });
 
+    
+});
+
+// add class when element in viewport
+function isScrolledIntoView(elem) {
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
+
+$(window).scroll(function () {
+    $('#about-me img').each(function () {
+        if (isScrolledIntoView(this) === true) {
+            $(this).addClass('fadeInUp');
+        }
+    });
+
+    $('.progress-experience').each(function () {
+        if (isScrolledIntoView(this) === true) {
+            $(this).addClass('visible');
+        }
+    });
+
+    $('.animate-left').each(function () {
+        if (isScrolledIntoView(this) === true) {
+            $(this).addClass('fadeInLeftBig');
+        }
+    });
+    $('.animate-right').each(function () {
+        if (isScrolledIntoView(this) === true) {
+            $(this).addClass('fadeInRightBig');
+        }
+    });
+
+
     // progressbar
-    $("#progress-uiux").animate({
-            width: "65%",
+    $(".visible #progress-design").animate({
+        width: "78%",
     }, 2500);
-    $("#progress-frontend").delay(100).animate({
+    $(".visible #progress-frontend").delay(100).animate({
         width: "80%",
     }, 2500);
-    $("#progress-seo").delay(200).animate({
-        width: "55%",
+    $(".visible #progress-seo").delay(200).animate({
+        width: "60%",
     }, 2500);
+});
+
+// animate tipewriter
+var $ = jQuery;
+$(function () {
+    $("[data-typer]").attr("data-typer", function(i, txt) {
+
+    var $typer = $(this),
+      tot = txt.length,
+      pauseMax = 80,
+      pauseMin = 50,
+      ch = 0;
+  
+    (function typeIt() {
+      if (ch > tot) return;
+      $typer.text(txt.substring(0, ch++));
+      setTimeout(typeIt, ~~(Math.random() * (pauseMax - pauseMin + 1) + pauseMin));
+    }());
+  
+  });
 });
 
 var app = new Vue ({
     el: '#cv-riza',
     data: {
         // Banner
-        msg: "I'm Riza.",
-        msg2:"A Frontend Developer & Website Designer",
+        msg: "Hello, I'm Riza. A Frontend Developer & Website Designer",
+        // msg2:"A Frontend Developer & Website Designer",
         urlBanner: "./img/project-banner.png",
         
         // About
         urlPortrait: "./img/ansori-riza.png",
         cls : "w-100 fillter-grey",
         titleAbout : "About Me",
-        subtitleAbout : "Hello, I'm Riza. I've Been Building Website for 5 Years",
-        pAbout1 : "My full name is Ansori Riza Yogi Saputro. A creative worker who focuses on front-end web development and web design.",
+        subtitleAbout : "I've Been Building Website for 5 Years",
+        pAbout1 : "My full name is Ansori Riza Yogi Saputro. A creative worker who focuses on frontend web development and web design.",
         pAbout2 : "My hobbies are playing games and reading books.",
         pAbout3 : "I graduated from STMIK Jendral Ahmad Yani Yogyakarta, with Computer Science bachelor's degree.",
         pAbout4 : "Since 2015 I have been building a website. I use HTML5, CSS, JavaScript, PHP.  Besides that, I experienced using Laravel, React, and WordPress.",
@@ -53,12 +112,13 @@ var app = new Vue ({
         todos: [
             { text: 'Web Developer at PT Qwords Company International (Jul 2019 - Feb 2022)' },
             { text: 'Web Developer at PT Grune Teknologi Indonesia (Apr 2018 - Apr 2019)' },
-            { text: 'Web / Graphic Designer at Insfilo (Apr 2016 - Mar 2018)' },
-            { text: 'Web / Graphic Designer at Odihost (Nov 2015 - Apr 2016)' },
+            { text: 'Frontend Developer & Website Designer at Insfilo (Apr 2016 - Mar 2018)' },
+            { text: 'Website Developer & Graphic Designer at Odihost (Nov 2015 - Apr 2016)' },
             { text: 'Developer at CV Danar Jati Teknikindo (May 2015 - Oct 2015)' }
         ],
         
         uiux : "ui/ux Design",
+        design : "web design",
         frontend : "frontend",
         seo : "seo",
         ecommerce : "ecommerce",
@@ -87,10 +147,8 @@ var app = new Vue ({
             linkedin : "https://id.linkedin.com/in/ansori-riza-yogi-saputro-655004137",
             github : "https://github.com/riza-ansori",
             pinterest : "https://id.pinterest.com/ansorisaputro",
-            dribble : "https://dribbble.com/ansoririza"
+            dribble : "https://dribbble.com/ansoririza",
+            behance : "https://www.behance.net/ansorisaputro"
         }
     }
 })
-
-
-
